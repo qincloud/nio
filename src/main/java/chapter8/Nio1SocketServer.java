@@ -8,7 +8,9 @@ import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 import java.nio.charset.Charset;
 import java.nio.charset.CharsetDecoder;
-
+/**
+ * author:lzq
+ * */
 public class Nio1SocketServer {
 
 	public static final String IP = "127.0.0.1";
@@ -35,7 +37,7 @@ public class Nio1SocketServer {
 					System.out.println("连接服务器地址:" + channel.getRemoteAddress());
 					if (channel.read(bytes) != -1) {
 						System.out.println("接收到了数据");
-						bytes.flip();
+						bytes.flip();    //开启读模式，如果不掉用这个方法就读不出数据
 						charbuff = decode.decode(bytes);
 						System.out.println(charbuff.toString());
 

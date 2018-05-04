@@ -7,7 +7,9 @@ import java.nio.CharBuffer;
 import java.nio.channels.SocketChannel;
 import java.nio.charset.Charset;
 import java.nio.charset.CharsetDecoder;
-
+/**
+ * author：lzq
+ * */
 public class Nio1SocketClient {
 
 	public static final String IP = "127.0.0.1";
